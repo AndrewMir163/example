@@ -5,8 +5,8 @@
 //7 -> нет
 
 
-Console.WriteLine("Введите число №1: ");
-int a = int.Parse(Console.ReadLine());
+Console.Write("Введите число: ");
+int a = int.Parse(Console.ReadLine()!);
 
 if ( a % 2 == 0)
 {
