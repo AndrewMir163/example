@@ -5,22 +5,25 @@
 //a = -9 b = -3 -> max = -3
 
 Console.WriteLine("Введите число №1: ");
-int a = int.Parse (Console.ReadLine());
+int a = int.Parse (Console.ReadLine()!);
 
 Console.WriteLine("Введите число №2: ");
-int b = int.Parse (Console.ReadLine());
+int b = int.Parse (Console.ReadLine()!);
 
 int max;
+int min;
 
 if (a > b)
 {
     max = a;
-    Console.Write("Max = ");
-    Console.WriteLine(max);
+    min = b;
+    Console.WriteLine($"Max = {max}, Min = {min} ");
 }
 else
 {
     max = b;
-    Console.Write("Max = ");
-    Console.WriteLine(max);
+    min = a;
+    Console.WriteLine($"Max = {max}, Min = {min} ");
 }
+
+
