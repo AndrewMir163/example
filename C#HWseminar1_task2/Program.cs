@@ -5,20 +5,18 @@
 //22 3 9 -> 22
 
 Console.WriteLine("Введите число №1: ");
-int a = int.Parse (Console.ReadLine());
+int a = int.Parse (Console.ReadLine()!);
 
 Console.WriteLine("Введите число №2: ");
-int b = int.Parse (Console.ReadLine());
+int b = int.Parse (Console.ReadLine()!);
 
 Console.WriteLine("Введите число №3: ");
-int c = int.Parse (Console.ReadLine());
+int c = int.Parse (Console.ReadLine()!);
 
 int max = a;
 
-if (a > max) max = a;
 if (b > max) max = b;
 if (c > max) max = c;
 
-Console.Write("Max из 3х чисел: ");
-Console.WriteLine(max);
+Console.WriteLine($"Максимальное число из 3-х = {max}");
 
