@@ -5,17 +5,17 @@
 //918 -> 1
 
 
-int Seconddigit(int digit)
+int SecondDigit(int digit)
 {
-    int Seconddigit = digit / 10 % 10;
-    return Seconddigit;
+    int secondDigit = digit / 10 % 10;
+    return secondDigit;
 }
 
 
 Console.WriteLine("Введите 3-х значное число");
-int digit = int.Parse (Console.ReadLine());
+int digit = int.Parse (Console.ReadLine()!);
 
-int Secondnumber = Seconddigit(digit);
+int Secondnumber = SecondDigit(digit);
 
 Console.Write("Вторая цифра числа:");
 Console.WriteLine (Secondnumber);
