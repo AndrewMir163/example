@@ -6,15 +6,23 @@
 
 //32679 -> 6
 
-
-
 Console.WriteLine("Введите число");
 
-int a = int.Parse (Console.ReadLine()!);
-string str = a.ToString();
-int[] b = new int[str.Length];
-for( int i=0; i< str.Length; i++)
+int a = int.Parse(Console.ReadLine()!);
+
+string strA = a.ToString();
+
+int size = strA.Length;
+
+if ( size > 2)
 {
-     b[i] = int.Parse(str);
-     Console.WriteLine(b);
+    Console.WriteLine("3-я цифра числа:  " + strA[2]);
 }
+else
+{
+    Console.WriteLine("недостаточно цифр в числе");
+}
+
+
+
+
