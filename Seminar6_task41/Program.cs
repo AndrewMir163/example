@@ -4,37 +4,74 @@
 
 1, -7, 567, 89, 223-> 3 */
 
-/* Console.Write("Введите любые числа (через пробел): ");
+Console.Write("!!!Введите числа через запятую: ");
+int[] numbers = StringToNum(Console.ReadLine()!);
 
-int[] array = Array.ConvertAll(Console.ReadLine().Split(),Convert.ToInt32);
-int count = 0;
- 
-for (int i = 0; i < array.Length; i++)
+Console.WriteLine();
+
+PrintArray(numbers);
+
+
+int sum = 0;
+for (int i = 0; i < numbers.Length; i++)
 {
-    if (array[i] > 0)
+    if (numbers[i] > 0)
     {
-        count++;
-    }
-}
- 
-Console.WriteLine($"Чисел > 0: {count}");
- */
-
-Console.Write("Введите любые числа : ");
-
-string[] number = Convert.ToString( Console.ReadLine());
-
-int size = number.Length;
-
-void ArrayPrint(string[]number)
-{
-    for (int i = 0; i< size; i++)
-    {
-        Console.Write("," (number[i]));
+        sum++;
     }
 }
 
-Console.WriteLine(ArrayPrint);
+Console.WriteLine(" ");
+
+Console.WriteLine($"Количество числе > 0 = {sum}");
 
 
+int[] StringToNum(string array)
+
+{
+    int count = 1;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i] == ',')
+        {
+            count++;
+        }
+    }
+
+    int[] numbers = new int [count];
+    int index = 0;
+
+    for (int i = 0; i < array.Length; i++)
+    {
+        string temp = "";
+
+        while (array [i] != ',')
+        {
+        if(i != array.Length - 1)
+        {
+            temp += array [i].ToString();
+            i++;
+        }
+        else
+        {
+            temp += array [i].ToString();
+            break;
+        }
+        }
+        numbers[index] = Convert.ToInt32(temp);
+        index++;
+    }
+    return numbers;
+}
+
+
+void PrintArray(int[] array)
+{
+    Console.Write("[ ");
+    for (int i = 0; i < array.Length; i++)
+    {
+        Console.Write(array[i] + " ");
+    }
+    Console.Write("]");
+}
 
