@@ -15,6 +15,11 @@ Console.WriteLine("Ответ: " + exponentiation);
 
 int Exp(int numberA, int numberB)
 {
-  int result = Convert.ToInt32(Math.Pow(numberA, numberB));
-  return result;
+int result = 1;
+for(int i=1; i <= numberB; i++)
+  {
+    result = result * numberA;
+  }
+  
+    return result;
 }
